@@ -30,5 +30,8 @@ Thumbs.db
 .idea/
 .vscode/
 
+# Generated demo artifacts
+outputs/
+
 # Partial downloads
 *.crdownload

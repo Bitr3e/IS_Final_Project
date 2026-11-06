@@ -30,9 +30,14 @@ The whole run takes about 10 seconds. Menu option 4 trains the bot first (about 
 
 ## How it maps to the code
 
-- Supervised: `encode()` (45 inputs), `optimal_moves()` (labels via `minimax_value()`), `run_supervised()`.
-- Unsupervised: `strategic()` (8 features), `run_unsupervised()`.
-- Reinforcement: `train_self_play()` (the Q-learning update), `greedy_move()` (the learned policy), `evaluate()`, `play_vs_bot()`.
+- `ml_demo.py`: the connector you run for the demo - menu, `run_all()` and `main()`.
+- `game.py`: shared rules and the perfect player (`legal()`, `optimal_moves()` via `minimax_value()`, `all_positions()`).
+- `supervised.py`: `encode()` (45 inputs), `optimal_moves()` labels, `run_supervised()`.
+- `unsupervised.py`: `strategic()` (8 features), `run_unsupervised()`.
+- `reinforcement.py`: `train_self_play()` (the Q-learning update), `greedy_move()` (the learned policy), `evaluate()`, `play_vs_bot()`.
+- `plotting.py` / `config.py`: shared plot helpers, the `--save` switch, the random seed and the output folder.
+
+Each paradigm can also be run on its own: `python supervised.py`, `python unsupervised.py`, `python reinforcement.py`.
 
 ## Notes for the demo
 
